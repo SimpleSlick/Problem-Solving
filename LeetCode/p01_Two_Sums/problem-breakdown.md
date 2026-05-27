@@ -42,34 +42,15 @@ Step-4: if nums[j] == target - nums[i]
 Step-5: return an empty array
 </pre>
 
-#### Main Program
-<pre>
-Step-1: Start
-Step-2: Input
-          n, target
-Step-3: Process
-          numbers = size(n)
-Step-4: Loop
-          i < numbers.length
-Step-5: Input
-          numbers[i]
-          [Repeat Step-4]
-Step-6: result = twoSum(numbers, target)
-Step-7: if result = null
-              Display "No Element found"
-          else
-              Display result[0] + " " + result[1]
-</pre>
-
 # Time Complexity Analysis
-To calculate how fast this algorithm runs, we analyze the repeating operations performed throughout the algorithm and represent them mathematically. The nested loop traversal contributes `n²` operations, and the comparison operation inside the nested loop contributes another `n²` operations, while the input loop and remaining statements are constant or linear operations. Therefore, the time equation becomes:
-$$T(n) = 2n^2 + n + 2$$
+To calculate how fast this algorithm runs, we analyze the repeating operations performed throughout the algorithm and represent them mathematically. The nested loop traversal contributes `n²` operations, and the comparison operation inside the nested loop contributes another `n²` operations, while the return statement is a constant operation. Therefore, the time equation becomes:
+$$T(n) = 2n^2 + 1$$
 
 ### Time Math
 To calculate the time complexity we need apply few principles:
 
 Ignore Constants: Constant values do not significantly affect the growth of an algorithm because they remain fixed even when the input size increases. Therefore, constants are ignored while finding the $Big \ O$ notation. After removing constants, the equation becomes:
-$$T(n) = n^2 + n + 1$$
+$$T(n) = n^2 + 1$$
 
 Power dominance: In time complexity analysis, the term with the highest growth rate dominates the entire equation as the input size becomes very large. Lower-order terms and smaller growth terms become negligible. Here, the term with the highest power is n, so the equation simplifies to: 
 $$T(n) = n^2$$
@@ -77,17 +58,25 @@ Which can be finally represented as:
 $$O(n^2)$$
 
 ### Space Complexity
-To calculate how much memory this algorithm uses, we analyze the extra storage and data structures used during execution. The algorithm stores the input array `numbers[]`, which requires `n` memory locations, and the `twoSum()` function returns another array containing the result indices. Apart from this, only a few constant variables are used. Therefore, the space equation becomes:
-$$S(n) = n + 2$$
+To calculate how much memory this algorithm uses, we analyze the variables and storage used during execution. The algorithm uses nested loops for traversal, but loops do not create additional memory proportional to the input size. The algorithm only stores loop variables, temporary comparison values, and returns an array containing two indices. Therefore, all memory usage remains constant throughout execution. Hence, the space equation becomes:
+$$S(n) = 4$$
 
 After removing the constants, the equation becomes:
-$$S(n) = n$$
+$$S(n) = 1$$
 
 The final space complexity becomes: 
-$$O(n)$$
-
-And if the input array is ignored and the space complexity of the auxiliary space becomes:
 $$O(1)$$
+
+For auxiliary space complexity:
+* only the temporary variables and returned index array are conducted,
+* no additional array or recursive strucutres grow with input size.
+
+So the auxiliary space equation becomes:
+$$AS(n) = 2$$
+
+After removing constants, the auxiliary space complexity becomes:
+$$O(1)$$
+
 # Edge Cases
 ### 1. Same Index Collision
 If the user provides an input array where an individual element happens to equal exactly half of the target value (e.g., nums = [3, 2, 4], target = 6):
