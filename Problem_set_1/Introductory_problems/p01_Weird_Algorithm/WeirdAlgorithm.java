@@ -1,5 +1,3 @@
-package p01_Weird_Algorithm;
-
 import java.util.Scanner;
 
 public class WeirdAlgorithm{

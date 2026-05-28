@@ -1,5 +1,3 @@
-package LeetCode.p01_Two_Sums;
-
 class TwoSums{
     public int[] twoSum(int[] nums, int target){
         for(int i = 0; i < nums.length; i++){

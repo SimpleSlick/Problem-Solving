@@ -1,5 +1,3 @@
-package p02_Missing_Numbers;
-
 import java.util.Scanner;
 
 public class missingNumbers{
