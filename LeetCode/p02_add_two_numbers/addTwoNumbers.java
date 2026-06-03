@@ -1,5 +1,3 @@
-package LeetCode.p02_add_two_numbers;
-
 /**
  * Definition for singly-linked list.
 //  * public class ListNode {
