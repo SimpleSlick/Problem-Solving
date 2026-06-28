@@ -1,5 +1,3 @@
-package p07_Two_Knights;
-
 import java.util.Scanner;
 
 public class TwoKnights {
