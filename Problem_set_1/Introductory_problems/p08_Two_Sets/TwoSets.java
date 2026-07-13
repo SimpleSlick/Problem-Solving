@@ -1,5 +1,3 @@
-package p08_Two_Sets;
-
 import java.util.Scanner;
 
 public class TwoSets {
