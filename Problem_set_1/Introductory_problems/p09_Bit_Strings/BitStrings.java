@@ -1,7 +1,4 @@
-package p09_Bit_Strings;
-
 import java.util.Scanner;
-// import java.math.BigInteger;
 
 public class BitStrings {
     public static void main(String[] args) {
