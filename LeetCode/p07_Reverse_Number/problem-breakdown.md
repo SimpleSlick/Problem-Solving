@@ -70,6 +70,39 @@ Which can finally be represented as:
 
 $$O(log \ n)$$
 
+### Space Complexity
+To calculate the space complexity, we analyze how much extra memory the algorithm uses during execution. This algorithm mainly uses:
+
+- `rev`
+- `digit`
+- `n`
+- Loop control variables
+
+No arrays, strings, recursion, or dynamically growing data structures are created. All variables require a fixed amount of memory regardless of the size of the input number. Therefore, the space equation becomes:
+
+$$S(n) = 4$$
+
+After applying principles for calculating complexity, the equation becomes:
+
+$$S(n) = 1$$
+
+Which can be finally represented as:
+
+$$O(1)$$
+
+### Auxiliary Space Math
+The algorithm does not create any additional data structure or dynamically allocate memory during execution. Therefore, the auxiliary space equation becomes:
+
+$$AS(n) = 4$$
+
+After removing constants:
+
+$$AS(n) = 1$$
+
+Which can be finally represented as:
+
+$$O(1)$$
+
 # Edge Cases
 ### 1. The Pre-Emptive Overflow Threshold
 When reversing a 10-digit number that begins with a large least-significant digit (e.g., $x = 1{,}534{,}236{,}469$, which reverses to an intended $9{,}646{,}324{,}351$):
