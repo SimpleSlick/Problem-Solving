@@ -1,5 +1,3 @@
-package Codeforces.p01b_SpreadSheets;
-
 import java.util.Scanner;
 
 public class spreadSheet {
